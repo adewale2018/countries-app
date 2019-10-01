@@ -1,0 +1,16 @@
+.Home {
+  border-top: 5px solid #FF6347;
+  padding-top: 2rem;
+}  
+.Home .container .row .card .card-header h3 {
+  color: #FF6347;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-weight: 800;
+}
+.card .list-group li {
+  color: #000;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+}

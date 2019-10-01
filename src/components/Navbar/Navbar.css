@@ -1,11 +1,16 @@
 .Navbar {
-  color: #fff;
+  color: #FF6347;
   font-size: 3rem;
   letter-spacing: .3rem;
 }
+.Navbar h1 {
+  font-weight: 800;
+  
+
+}
 
 .Navbar h1 i {
-  color: #fff;
+  color: #FF6347;
   font-size: 4rem;
   margin: 1rem;
   transition: all .3s;
@@ -16,5 +21,5 @@
 }
 .Navbar h1 i:hover {
   cursor: pointer;
-  color: #febc39;
+  color: #000;
 }
