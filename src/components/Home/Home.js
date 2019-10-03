@@ -22,7 +22,7 @@ export default class Home extends Component {
           <div className="row">
           { datas && datas.map(data => (
             <div className="col-md" key={data.name}>
-              <div className="card text-center text-dark border-dark" style={{width: '18rem'}}>
+              <div id="card" className="card text-center text-dark border-info" style={{width: '25rem', height: "40rem"}}>
                   <div className="card-header bg-transparent">
                     <h3>{data.name}</h3>
                   </div>
@@ -30,7 +30,7 @@ export default class Home extends Component {
                     <ul className="list-group list-group-flush">
                       <li className="list-group-item">Capital: {data.capital}</li>
                       <li className="list-group-item">Calling Code: {data.callingCodes}</li>
-                      <li className="list-group-item">Time-zone: {data.timezones}</li>
+                      <li className="list-group-item">Population: {data.population}</li>
                     </ul>
                   <div className="card-body">
                     <a href="#" className="btn btn-primary">Learn More</a>
