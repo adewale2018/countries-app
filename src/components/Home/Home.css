@@ -1,9 +1,11 @@
 .Home {
   border-top: 5px solid #FF6347;
   padding-top: 2rem;
+  text-align: center;
 }  
 .Home .container .row .card .card-header h3 {
-  color: #FF6347;
+  color: steelblue;
+  padding: 1rem;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
@@ -14,3 +16,12 @@
   font-size: 1.5rem;
   letter-spacing: .1rem;
 }
+#card {
+  margin-bottom: 1.5rem;
+  border: 2px solid;
+}
+.card-body a {
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+}
+
