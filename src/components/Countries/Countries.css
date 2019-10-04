@@ -1,0 +1,21 @@
+.Countries .row .card .card-header h3 {
+  /* color: #FF6347; */
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  font-weight: 800;
+}
+.card .list-group li {
+  color: #000;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+}
+#card {
+  margin-bottom: 1.5rem;
+  border: 1px solid;
+}
+.card-body a {
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+}

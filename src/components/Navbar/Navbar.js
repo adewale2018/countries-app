@@ -10,7 +10,7 @@ export default class Navbar extends Component {
           <h1 className="navbar-brand">
             <i className="fas fa-globe d-inline-block align-top"></i>
           </h1>
-          <h1>WORLD APP</h1>
+          <h1>WORLD INFO APP</h1>
         </nav>
       </div>
     );
