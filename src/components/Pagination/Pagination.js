@@ -1,7 +1,7 @@
 import React from 'react';
 import './Pagination.css';
 
-const Pagination = ({ countryPerPage, datas, paginate, currentPage }) => {
+const Pagination = ({ countryPerPage, datas, paginate }) => {
   const pageNumbers = [];
   for(let i = 1; i <= Math.ceil(datas/countryPerPage); i++ ) {
     pageNumbers.push(i);
@@ -16,7 +16,7 @@ const Pagination = ({ countryPerPage, datas, paginate, currentPage }) => {
               <li key={number} className="page-item">
                 <a 
                   className='page-link' 
-                  href="!#"
+                  href="javascript:void(0)"
                   onClick={() => paginate(number)}
                 >{number}
                 </a>
