@@ -1,16 +1,17 @@
-.Navbar {
-  color: #FF6347;
+.Nav {
+  color: #fff;
   font-size: 3rem;
   letter-spacing: .3rem;
+  border-bottom: 5px solid #FF6347;
+  margin-bottom: 2rem;
+  margin-left: -1.5rem; 
+  margin-right: -1.5rem; 
 }
-.Navbar h1 {
+.Nav h1 {
   font-weight: 800;
-  
-
 }
 
-.Navbar h1 i {
-  color: #FF6347;
+.Nav h1 i {
   font-size: 4rem;
   margin: 1rem;
   transition: all .3s;
@@ -19,7 +20,7 @@
   -ms-transition: all .3s;
   -o-transition: all .3s;
 }
-.Navbar h1 i:hover {
+.Nav h1 i:hover {
   cursor: pointer;
-  color: #000;
+  color: #c2cae8;
 }

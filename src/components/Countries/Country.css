@@ -1,0 +1,19 @@
+.Country .card-header {
+  background-color: #0097a7;
+  border-bottom: 2px solid #fff;
+}
+.Country .card-header h3 {
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  font-weight: 800;
+}
+.Country .card-body a {
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: rgba(0, 151, 167, .7);
+  border: 2px dotted #000;
+}
