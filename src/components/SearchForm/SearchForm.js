@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './SearchForm.css';
 
-const SearchForm = ({ searchUsers }) => {
+const SearchForm = ({ searchUsers, fireAlert }) => {
   const [state, setState] = useState('');
 
   const handleChange = e => {
@@ -10,8 +10,12 @@ const SearchForm = ({ searchUsers }) => {
   }
   const onSubmit = e => {
     e.preventDefault();
-    searchUsers(state);
-    setState("");
+    if(state === "") {
+      fireAlert('Search field should not be emptied!, put the name of the country to search ');
+    } else {
+      searchUsers(state);
+      setState("");
+    }
   }
   return (
     <div className="SearchForm">
