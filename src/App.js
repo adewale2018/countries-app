@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navbar from './components/Navbar/Navbar';
 import Countries from './components/Countries/Countries';
 import Pagination from './components/Pagination/Pagination';
+import SearchForm from './components/SearchForm/SearchForm';
 import './App.css';
 
 
@@ -33,6 +34,7 @@ const App = () =>  {
   return (
     <div className="App container-fluid text-center">
       <Navbar />
+      <SearchForm />
       <div className="App-minor">
         <Countries 
           datas={currentDatas} 
