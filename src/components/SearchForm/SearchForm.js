@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './SearchForm.css';
 
-const SearchForm = () => {
+const SearchForm = ({ searchUsers }) => {
   const [state, setState] = useState('');
+
   const handleChange = e => {
     setState(e.target.value);
   }
+  const onSubmit = e => {
+    e.preventDefault();
+    searchUsers(state);
+    setState("");
+  }
   return (
     <div className="SearchForm">
-      <form>
+      <form onSubmit={onSubmit}>
         <div className="form-row">
           <div className="form-group col-md-6">
             <input 
@@ -31,6 +38,9 @@ const SearchForm = () => {
       </form>
     </div>
   );
+}
+SearchForm.propTypes = {
+  searchUsers: PropTypes.func.isRequired
 }
 
 export default SearchForm;
