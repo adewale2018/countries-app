@@ -20,6 +20,7 @@ const SearchForm = () => {
               className="form-control"
             />
           </div>
+          <i class="fas fa-search"></i>
           <div className="form-group col-md-2">
             <input 
               type="submit" 
