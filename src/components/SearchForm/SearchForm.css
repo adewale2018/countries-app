@@ -1,10 +1,30 @@
 .SearchForm {
   margin-bottom: 1.5rem;
 }
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .type-text {
+  position: relative;
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+}
+form .type-text i {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  font-size: 1.3rem;
+  color: rgba(39, 39, 39, .8);
+}
+
 .SearchForm form input[type=text] {
   border: 1px solid #ccc;
   border-radius: 5rem;
   height: 3rem;
+  width: 100%;
   font-size: 1.5rem;
   letter-spacing: .3rem;
   padding: 1.5rem;
@@ -31,13 +51,20 @@
   color: #0097a7;
 }
 .SearchForm form input[type=submit] {
-  color: #0097a7;
+  background-color: #0097a7;
+  color: #fff;
+  padding: .5rem 1.5rem;
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
+  margin-left: .8rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  outline: none;
 }
 .SearchForm form input[type=submit]:hover {
-  color: #fff;
-  background-color: #0097a7;
-  border: 1px solid #fff;
+  cursor: pointer;
 }

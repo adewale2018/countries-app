@@ -1,26 +1,19 @@
 .Nav {
-  color: #fff;
-  font-size: 3rem;
-  letter-spacing: .3rem;
+  background-color: #0097a7;
+  font-size: 2.5rem;
+  letter-spacing: .2rem;
   border-bottom: 5px solid #FF6347;
   margin-bottom: 2rem;
-  margin-left: -1.5rem; 
-  margin-right: -1.5rem; 
+  padding: 1rem 2rem;
 }
-.Nav h1 {
-  font-weight: 800;
+.Nav nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.Nav h1 i {
-  font-size: 4rem;
-  margin: 1rem;
-  transition: all .3s;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -o-transition: all .3s;
-}
-.Nav h1 i:hover {
-  cursor: pointer;
-  color: #c2cae8;
+a.link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 2rem;
 }
