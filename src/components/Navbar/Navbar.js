@@ -1,21 +1,27 @@
 import React from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Navbar = ({ title, icon }) => {
   return (
     <header className="Nav">
-      <nav className="navbar bg-info">
-        <h1 className="navbar-brand">
-          <i className={`${icon} d-inline-block align-top`}></i>
-        </h1>
-        <h1>{title}</h1>
+      <nav>
+        <div className="Nav-left">
+          <span style={{marginRight: '1rem', color: "#fff", fontSize: "2.8rem"}}><i className={`${icon}`}></i></span>
+          <span style={{color: "#fff"}}>{title}</span>
+        </div>
+        <div className="Nav-right">
+          <span><Link className="link" to="/">Home</Link></span>
+          <span><Link className="link" to="/about">About</Link></span>
+          <span><a className="link" target="_blank" rel="noopener noreferrer" href={'https://github.com/adewale2018'}>Contact</a></span>
+        </div>
       </nav>
     </header>
   );
 }
 Navbar.defaultProps = {
-  title: 'WORLD INFO APP',
+  title: 'COUNTRIES INFORMANT',
   icon: 'fas fa-globe'
 }
 Navbar.propTypes = {

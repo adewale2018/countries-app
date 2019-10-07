@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Countries from './components/Countries/Countries';
 import SearchForm from './components/SearchForm/SearchForm';
 import Alert from './components/Alert/Alert';
+import About from './components/Pages/About';
 import './App.css';
 
 
@@ -43,16 +45,23 @@ const App = () =>  {
     <div className="App container-fluid text-center">
       <Navbar />
       <Alert alert={alert}/>
-      <SearchForm 
-        searchUsers={searchUsers}
-        fireAlert={fireAlert}
-      />
-      <div className="App-minor">
-        <Countries 
-          datas={datas}
-          loading={loading}
+      <Switch>
+      <Route exact path="/" render={props => (
+        <Fragment>
+          <SearchForm 
+          searchUsers={searchUsers}
+          fireAlert={fireAlert}
         />
-      </div>
+        <div className="App-minor">
+          <Countries 
+            datas={datas}
+            loading={loading}
+          />
+        </div>
+        </Fragment>
+      )} />
+        <Route exact path="/about" component={About} />
+      </Switch>
     </div>
   );
 }

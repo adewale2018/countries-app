@@ -1,11 +1,8 @@
-.card .list-group li {
-  color: #000;
-  font-size: 1.8rem;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
+.Countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
-#card {
-  margin-bottom: 1.5rem;
-  border: 2px solid;
-}
+
 

@@ -11,7 +11,7 @@ const SearchForm = ({ searchUsers, fireAlert }) => {
   const onSubmit = e => {
     e.preventDefault();
     if(state === "") {
-      fireAlert('Search field should not be emptied!, put the name of the country to search ');
+      fireAlert('Search field should not be emptied!');
     } else {
       searchUsers(state);
       setState("");
@@ -20,31 +20,29 @@ const SearchForm = ({ searchUsers, fireAlert }) => {
   return (
     <div className="SearchForm">
       <form onSubmit={onSubmit}>
-        <div className="form-row">
-          <div className="form-group col-md-6">
+          <div className="type-text">
             <input 
               type="text" 
               name="country" 
               placeholder="Search for Country"
               value={state}
               onChange={handleChange}
-              className="form-control"
             />
+            <i class="fas fa-search"></i>
           </div>
-          <div className="form-group col-md-2">
+          <div>
             <input 
               type="submit" 
-              value="Search"
-              className="form-control btn btn-outline-dark btn-lg" 
+              value="Search" 
             />
           </div>
-        </div>
       </form>
     </div>
   );
 }
 SearchForm.propTypes = {
-  searchUsers: PropTypes.func.isRequired
+  searchUsers: PropTypes.func.isRequired,
+  fireAlert: PropTypes.func.isRequired
 }
 
 export default SearchForm;

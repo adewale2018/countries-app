@@ -10,7 +10,7 @@ const Countries = ({ datas, loading }) => {
     return <Spinner />
   }
   return (
-    <div className="Countries row">
+    <div className="Countries">
       {datas.map(data => (
         <Country data={data} key={data.name}/>
       ))}
