@@ -28,7 +28,7 @@ const SearchForm = ({ searchUsers, fireAlert }) => {
               value={state}
               onChange={handleChange}
             />
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </div>
           <div>
             <input 

@@ -1,18 +1,21 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Countries from './components/Countries/Countries';
 import SearchForm from './components/SearchForm/SearchForm';
 import Alert from './components/Alert/Alert';
 import About from './components/Pages/About';
+import SingleCountry from './components/Countries/SingleCountry';
 import './App.css';
 
 
 const App = () =>  {
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [singleLoading, setSingleLoading] = useState(true);
   const [alert, setAlert] = useState(null);
+  const [country, setCountry] = useState({});
 
   useEffect(() => {
     const fetchDatas = async () => {
@@ -32,6 +35,15 @@ const App = () =>  {
     setLoading(false);
   };
 
+  // Get a single country
+
+  const getCountry =  async name => {
+    setSingleLoading(true);
+    const response = await axios.get(`https://restcountries.eu/rest/v2/name/${name}`);
+    setCountry(response.data[0]);
+    setSingleLoading(false);
+  }
+
   // Alert if search field is empty.
   const fireAlert = (msg, type) => {
     setAlert({msg, type});
@@ -46,21 +58,42 @@ const App = () =>  {
       <Navbar />
       <Alert alert={alert}/>
       <Switch>
-      <Route exact path="/" render={props => (
-        <Fragment>
-          <SearchForm 
-          searchUsers={searchUsers}
-          fireAlert={fireAlert}
-        />
-        <div className="App-minor">
-          <Countries 
-            datas={datas}
-            loading={loading}
+      <Route 
+        exact 
+        path="/" 
+        render={props => (
+          <Fragment>
+            <SearchForm 
+            searchUsers={searchUsers}
+            fireAlert={fireAlert}
           />
-        </div>
-        </Fragment>
-      )} />
-        <Route exact path="/about" component={About} />
+          <div className="App-minor">
+            <Countries 
+              datas={datas}
+              loading={loading}
+            />
+          </div>
+          </Fragment>
+        )} 
+      />
+      <Route 
+        exact 
+        path="/about" 
+        component={About} 
+      />
+      <Route 
+        exact 
+        path="/:name" 
+        render={ props => (
+        <SingleCountry 
+          {...props } 
+          getCountry={getCountry} 
+          country={country} 
+          initialRender={true}
+          singleLoading={singleLoading}
+        />
+        )} 
+      />
       </Switch>
     </div>
   );
