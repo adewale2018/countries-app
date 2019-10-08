@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './Country.css';
 
 
@@ -16,7 +17,7 @@ const Country = ({ data: { name, flag, capital, callingCodes, population } }) =>
           <p><strong>Calling Code</strong>: {callingCodes}</p>
           <p className="last"><strong>Population</strong>: {population}</p>
         </div>
-        <a href="">Learn More</a>
+        <Link to={`/${name}`}>Learn More</Link>
       </div>
     </div>
   );
