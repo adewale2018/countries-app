@@ -68,3 +68,12 @@ form .type-text i {
 .SearchForm form input[type=submit]:hover {
   cursor: pointer;
 }
+@media only screen and (max-width: 466px) {
+  form {
+    justify-content: left;
+    margin-left: 1rem;
+  }
+  form .type-text {
+    flex: 0 0 50%;
+  }
+}
