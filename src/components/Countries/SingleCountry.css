@@ -25,9 +25,17 @@
   letter-spacing: .3rem;
   text-align: center;
 }
+.top-container h2 i {
+  color: #0097a7;
+  font-size: 3rem;
+  margin-right: 2rem;
+}
 .top-left {
   flex: 0 0 45%;
   margin-right: 5rem;
+}
+.top-right ul {
+  list-style-type: none;
 }
 .top-right ul li {
   margin-bottom: 2rem;
@@ -36,8 +44,13 @@
   color:  #0097a7;
   font-size: 2rem;
 }
+.top-right ul li h3 i {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  color: #ff4500;
+}
 .top-container .top-left img {
-  border: 2px solid #0097a7;
+  border: 2px solid #ccc;
   width: 100%;
   height: 300px;
 }
@@ -46,7 +59,7 @@
   font-size: 2rem;
   background-color: #272727;
   padding: 1rem 2rem;
-  border-bottom: 3px solid #fff;
+  border-bottom: 4px solid #fff;
   letter-spacing: .2rem;
 }
 .bt-main {
@@ -55,12 +68,12 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap; 
-  padding-bottom: 10rem;
+  padding: 5rem 0 10rem 0;
 }
 .bt-main .comon {
   border: 2px solid #fff;
   text-align: center;
-  width: 18%;
+  width: 22%;
   margin-top: 5rem;
   padding: 1rem 0 3rem 0;
   border-radius: 50%;
@@ -72,26 +85,31 @@
 .bt-main .comon h3 {
   text-transform: uppercase;
   color: #fff;
-  font-size: 1.5rem;
-  letter-spacing: .2rem;
-  padding-top: 2rem;
+  font-size: 2.5rem;
+  letter-spacing: .3rem;
+  padding-top: 2.5rem;
 }
 .bt-main .comon p {
   text-transform: uppercase;
+  letter-spacing: .2rem;
 }
-.bt-submain {
+#bt-submain {
   display: flex;
   justify-content: space-evenly;
-  padding: 2rem 0 8rem 0;
-  align-items: center; 
+  padding: 2rem 0 8rem 0; 
+}
+#bt-submain .list-class {
+  margin: 2rem 0;
   text-align: left;
 }
-.list-class {
-  margin: 2rem 0;
+#bt-submain .list-class p {
+  text-align: left;
 }
-.list-class h3 {
+#bt-submain .list-class h3 {
   color: #0097a7;
   font-size: 2.2rem;
   text-transform: uppercase;
   letter-spacing: .3rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
 }

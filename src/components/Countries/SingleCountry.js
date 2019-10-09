@@ -6,10 +6,6 @@ import PropTypes from 'prop-types';
 
 const SingleCountry = props => {
   const { singleLoading, initialRender } = props;
-  // const getCountry = async () => {
-  //   await props.getCountry(props.match.params.name);
-  // }
-  // useEffect( getCountry, []);
   useEffect(() => {
     props.getCountry(props.match.params.name);
   }, []);
@@ -40,29 +36,29 @@ const SingleCountry = props => {
       <p>Below are the quick and vital information about {name}.</p>
       <div className="top-container">
         <div className="top-left">
-          <h2>{name}'s flag <i className="far fa-flag"/></h2>
+          <h2><i className="fas fa-flag"/> {name}'s flag </h2>
           <img src={flag} alt={`${name}'s flag`}/>
         </div>
         <div className="top-right">
           <h2>About {name}</h2>
           <ul>
             <li>
-              <h3>Native Name: {nativeName}</h3>
+              <h3><i className="fas fa-arrow-alt-circle-right"/> Native Name: {nativeName}</h3>
             </li>
             <li>
-              <h3>Capital: {capital}</h3>
+              <h3><i className="fas fa-arrow-alt-circle-right"/> Capital: {capital}</h3>
             </li>
             <li>
-              <h3>Numeric Code: {numericCode}</h3>
+              <h3><i className="fas fa-arrow-alt-circle-right"/> Numeric Code: {numericCode}</h3>
             </li>
             <li>
-              <h3>Population: {population}</h3>
+              <h3><i className="fas fa-arrow-alt-circle-right"/> Population: {population}</h3>
             </li>
             <li>
-              <h3>Calling Code: {callingCodes}</h3>
+              <h3><i className="fas fa-arrow-alt-circle-right"/> Calling Code: {callingCodes}</h3>
             </li>
             <li>
-              <h3>Area: {area}</h3>
+              <h3><i className="fas fa-arrow-alt-circle-right"/> Area: {area}</h3>
             </li>
           </ul>
         </div>
@@ -84,7 +80,7 @@ const SingleCountry = props => {
               <p>{demonym}</p>
           </div>
         </div>
-        <div className="bt-submain">
+        <div id="bt-submain">
           <div className="list-class">
             <h3>Languages</h3>
               {languages.map(lang => (
@@ -103,7 +99,7 @@ const SingleCountry = props => {
               ))}
           </div>
           <div className="list-class">
-            <h3>Currencies</h3>
+            <h3>Currency</h3>
               {currencies.map(curr => (
                 <Fragment key={curr.code}>
                   <p>Code: {curr.code}</p>

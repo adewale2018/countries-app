@@ -18,13 +18,32 @@ a.link {
   font-size: 2rem;
 }
 
+@media only screen and (max-width: 520px) {
+  .Nav nav .Nav-left #title-main {
+    display: block;
+    margin-top: -5rem;
+  }
+  .Nav nav .Nav-left span i {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .Nav {
     font-size: 2rem;
     letter-spacing: .1rem;
     padding: 1rem;
   }
-  .Nav nav .Nav-left span i {
-    display: none;
+ 
+}
+@media only screen and (max-width: 310px) {
+  .Nav {
+    padding: .5rem;
   }
+  .Nav nav {
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+  }
+ 
 }

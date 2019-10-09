@@ -1,0 +1,16 @@
+#alert {
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  background-color: orangered; 
+  text-align: center; 
+  color: #fff; 
+  width: 60%; 
+  margin: .8rem auto;
+}
+
+@media only screen and (max-width: 540px) {
+  #alert {
+    letter-spacing: 0;
+    margin: 1rem auto; 
+  }
+}

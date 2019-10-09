@@ -7,6 +7,7 @@ import SearchForm from './components/SearchForm/SearchForm';
 import Alert from './components/Alert/Alert';
 import About from './components/Pages/About';
 import SingleCountry from './components/Countries/SingleCountry';
+// import Footer from './components/Footer/Footer';
 import './App.css';
 
 
@@ -95,6 +96,7 @@ const App = () =>  {
         )} 
       />
       </Switch>
+      {/* <Footer /> */}
     </div>
   );
 }

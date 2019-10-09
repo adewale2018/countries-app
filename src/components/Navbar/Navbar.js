@@ -8,8 +8,8 @@ const Navbar = ({ title, icon }) => {
     <header className="Nav">
       <nav>
         <div className="Nav-left">
-          <span style={{marginRight: '1rem', color: "#fff", fontSize: "2.8rem"}}><i className={`${icon}`}></i></span>
-          <span style={{color: "#fff"}}>{title}</span>
+          <span style={{marginRight: '1rem', color: "#fff", fontSize: "2.8rem"}}><i className={`${icon}`}/></span>
+          <span id="title-main" style={{color: "#fff"}}>{title}</span>
         </div>
         <div className="Nav-right">
           <span><Link className="link" to="/">Home</Link></span>
