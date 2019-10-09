@@ -21,11 +21,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media only screen and (max-width: 900px) {
   html {
-    font-size: 55.6%;
+    font-size: 60.5%;
   }
 }
 @media only screen and (max-width: 654px) {
   html {
-    font-size: 52.6%;
+    font-size: 55.5%;
   }
 }
