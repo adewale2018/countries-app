@@ -24,7 +24,7 @@ const SearchForm = ({ searchUsers, fireAlert }) => {
             <input 
               type="text" 
               name="country" 
-              placeholder="Search for Country"
+              placeholder="Search for a country"
               value={state}
               onChange={handleChange}
             />

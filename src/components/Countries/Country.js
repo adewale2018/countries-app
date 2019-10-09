@@ -13,9 +13,9 @@ const Country = ({ data: { name, flag, capital, callingCodes, population } }) =>
         </div>
         <img src={flag} alt={`${name} flag` }/>
         <div className="c-body">
-          <p><strong>Capital</strong>: {capital}</p>
-          <p><strong>Calling Code</strong>: {callingCodes}</p>
-          <p className="last"><strong>Population</strong>: {population}</p>
+          <p><span>Capital</span>: {capital}</p>
+          <p><span>Calling Code</span>: {callingCodes}</p>
+          <p className="last"><span>Population</span>: {population}</p>
         </div>
         <Link to={`/${name}`}>Learn More</Link>
       </div>

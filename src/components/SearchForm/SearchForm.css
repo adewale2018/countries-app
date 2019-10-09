@@ -1,5 +1,5 @@
 .SearchForm {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 form {
   display: flex;
@@ -26,7 +26,7 @@ form .type-text i {
   height: 3rem;
   width: 100%;
   font-size: 1.5rem;
-  letter-spacing: .3rem;
+  letter-spacing: .2rem;
   padding: 1.5rem;
   color: #0097a7;
   -webkit-border-radius: 5rem;
@@ -48,7 +48,8 @@ form .type-text i {
   -o-transform: scale(0.95);
 }
 .SearchForm form input[type=text]::placeholder {
-  color: #0097a7;
+  color: #000;
+  letter-spacing: .1rem;
 }
 .SearchForm form input[type=submit] {
   background-color: #0097a7;
@@ -68,12 +69,21 @@ form .type-text i {
 .SearchForm form input[type=submit]:hover {
   cursor: pointer;
 }
-@media only screen and (max-width: 466px) {
+@media only screen and (max-width: 530px) {
   form {
     justify-content: left;
     margin-left: 1rem;
   }
   form .type-text {
-    flex: 0 0 50%;
+    flex: 0 0 65%;
+  }
+  .SearchForm form input[type=submit] {
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
   }
 }

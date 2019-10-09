@@ -28,7 +28,7 @@
   text-transform: uppercase;
   border-bottom: 1px solid #eee;
 }
-.c-body p strong {
+.c-body p span {
   color: #0097a7;
   padding: .3rem;
   
@@ -53,6 +53,25 @@
   font-size: 2rem;
   color: #fff;
   background-color: rgba(0, 151, 167, .7);
-  border: 2px dotted #000;
   text-decoration: none;
+  border-radius: 2rem;
+  letter-spacing: .2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+.Country .card a:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
 }
